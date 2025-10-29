@@ -8,7 +8,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 passport.use(new GoogleStrategy({
     clientID:     GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL || "http://localhost:5000/google/callback",
+    callbackURL: "https://google-oauth2-tutorial-production.up.railway.app/google/callback",
     passReqToCallback   : true
   },
 
