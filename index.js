@@ -22,7 +22,7 @@ app.use(session({
     cookie: {
         secure: process.env.NODE_ENV === 'production',
         httpOnly: true,
-        maxAge: 24 * 60 * 60 * 1000 // 24 hours
+        maxAge: 24 * 60 * 60 * 1000 
     }
 }));
 
@@ -38,7 +38,7 @@ app.get('/',(req,res)=>{
 app.get('/auth/google',
     passport.authenticate('google',{
         scope:['email','profile'],
-        prompt: 'select_account'  // Forces account selection screen
+        prompt: 'select_account'  
     })
 )
 

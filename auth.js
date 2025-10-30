@@ -11,7 +11,7 @@ passport.use(new GoogleStrategy({
     clientSecret: GOOGLE_CLIENT_SECRET,
     callbackURL: process.env.NODE_ENV === 'production' 
         ? "https://google-oauth2-tutorial-production.up.railway.app/google/callback"
-        : "http://localhost:5000/google/callback",
+        : "http://localhost:8080/google/callback",
     passReqToCallback   : true
   },
 
