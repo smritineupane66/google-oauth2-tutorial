@@ -53,6 +53,7 @@ app.get('/auth/failure',(req,res)=>{
 })
 
 
+
 app.get('/protected',isLoggedIn,(req,res)=>{
     console.log('User object:', req.user);
     res.send(`

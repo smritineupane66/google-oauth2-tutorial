@@ -9,7 +9,9 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://google-oauth2-tutorial-production.up.railway.app/google/callback",
+    callbackURL: process.env.NODE_ENV === 'production' 
+        ? "https://google-oauth2-tutorial.onrender.com/google/callback"
+        : "http://localhost:8080/google/callback",
     passReqToCallback   : true
   },
 
