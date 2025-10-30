@@ -33,7 +33,6 @@ app.use(passport.session());
 
 app.get('/',(req,res)=>{
     res.send('<a href = "/auth/google">Authenticate with google </a>');
-
 })
 
 app.get('/auth/google',
